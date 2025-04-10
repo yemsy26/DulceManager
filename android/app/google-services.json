@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455801826429",
+    "firebase_url": "https://dulcemanager-abfdf-default-rtdb.firebaseio.com",
+    "project_id": "dulcemanager-abfdf",
+    "storage_bucket": "dulcemanager-abfdf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455801826429:android:67f6026455340dedcad514",
+        "android_client_info": {
+          "package_name": "com.example.dulcemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455801826429-k7p6i2kfvnehqjlfrhet0kofvqjm7jun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxsTD8Ep_8yEdnJSxeS7TtrJUIQMYcPIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455801826429-k7p6i2kfvnehqjlfrhet0kofvqjm7jun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

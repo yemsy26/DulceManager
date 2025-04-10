@@ -1,0 +1,65 @@
+name: dulcemanager
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.7.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  blue_thermal_printer:
+    path: blue_thermal_printer-1.2.3
+
+  # Firebase (autenticación, base de datos y almacenamiento)
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.5.1
+  firebase_storage: ^12.4.5
+
+  # Paquetes básicos y de terceros
+  cupertino_icons: ^1.0.8
+  image_picker: ^0.8.7+4
+  url_launcher: ^6.1.7
+
+  # Manejo de PDF, impresión y archivos
+  pdf: ^3.10.5
+  printing: ^5.12.5
+  share_plus: ^10.1.4
+  path_provider: ^2.0.11
+
+  # Exportar a Excel (opcional)
+  excel: ^2.0.2
+  http: ^0.13.5
+  intl: ^0.17.0
+  candlesticks: ^2.1.0
+
+  # Impresión en impresoras térmicas vía Bluetooth
+  print_bluetooth_thermal: ^1.1.6
+  shared_preferences: ^2.0.15
+
+
+  # Captura de pantalla para incluir gráficos en PDF
+  fl_chart: ^0.70.2
+  screenshot: ^3.0.0
+  cached_network_image: ^3.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/Roboto-Regular.ttf
+    - assets/placeholder.png
+    - assets/logo.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
