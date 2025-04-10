@@ -13,25 +13,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Flutter
+      - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
           flutter-version: 'stable'
 
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
       - name: Install CocoaPods
         run: |
+          brew install cocoapods
           cd ios
           pod install
           cd ..
 
       - name: Build IPA
-        run: |
-          flutter build ipa --export-options-plist=ios/ExportOptions.plist
+        run: flutter build ipa --export-options-plist=ios/ExportOptions.plist
         env:
           FLUTTER_BUILD_NAME: ${{ github.run_number }}
           FLUTTER_BUILD_NUMBER: ${{ github.run_id }}
 
-      - name: Upload IPA
+      - name: Upload IPA artifact
         uses: actions/upload-artifact@v3
         with:
           name: ios-ipa
