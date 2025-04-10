@@ -1,0 +1,16 @@
+workflows:
+  ios-workflow:
+    name: Build iOS IPA
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get dependencies
+        script: |
+          flutter pub get
+          cd ios
+          pod install
+          cd ..
+      - name: Build IPA
+        script: flutter build ipa --export-options-plist=ios/ExportOptions.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
